@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker", "CouchPoker\CouchPoker.csproj", "{139E9225-BEE8-4AA2-81F2-537071649066}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker.Server", "CouchPoker.Server\CouchPoker.Server.csproj", "{139E9225-BEE8-4AA2-81F2-537071649066}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
