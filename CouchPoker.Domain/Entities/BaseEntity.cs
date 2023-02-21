@@ -1,6 +1,6 @@
-﻿namespace CouchPoker.Domain;
+﻿namespace CouchPoker.Domain.Entities;
 
 public class BaseEntity
 {
-    
+    public int Id { get; set; }
 }

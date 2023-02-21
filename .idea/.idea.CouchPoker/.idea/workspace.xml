@@ -7,38 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8762a3e8-716a-4738-be29-ab54c56b7994" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CouchPoker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CouchPoker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/.env.development" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/aspnetcore-https.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/aspnetcore-react.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/AppRoutes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/components/Counter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/components/FetchData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/components/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/components/Layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/components/NavMenu.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/components/NavMenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/serviceWorkerRegistration.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/ClientApp/src/setupProxy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/CouchPoker.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Server/CouchPoker.Server.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Server/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Server/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.Server/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CouchPoker.sln" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CouchPoker.Domain/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Domain/Entities/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CouchPoker.Domain/Entities/Card.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Domain/Entities/Card.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CouchPoker.Domain/Entities/GameBoard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Domain/Entities/GameBoard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CouchPoker.Domain/Entities/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CouchPoker.Domain/Entities/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,23 +32,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\CouchPoker\\CouchPoker.Server\\server-app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\CouchPoker\\CouchPoker.Server\\server-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\PPWis\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\PPWis\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\PPWis\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\PPWis\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\PPWis\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\PPWis\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.CouchPoker">
     <configuration name="CouchPoker" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/CouchPoker.Server/CouchPoker.Server.csproj" />
@@ -119,6 +91,9 @@
       <updated>1669640681465</updated>
       <workItem from="1669640685733" duration="353000" />
       <workItem from="1676919299196" duration="5215000" />
+      <workItem from="1676928857642" duration="2884000" />
+      <workItem from="1676931894495" duration="20000" />
+      <workItem from="1676998495753" duration="2935000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1669640779559</created>
