@@ -30,7 +30,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
         <button 
-            className={"btn btn-ghost btn-sm"}
+            className={"btn btn-ghost btn-sm bg-base-100"}
             onClick={() => console.log("/api/test")}>
             Test
         </button>
