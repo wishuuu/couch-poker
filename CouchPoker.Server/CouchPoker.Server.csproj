@@ -16,10 +16,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
         <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.6" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.3" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.3" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -31,6 +36,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\CouchPoker.BoardInfrastructure\CouchPoker.BoardInfrastructure.csproj" />
+      <ProjectReference Include="..\CouchPoker.Game\CouchPoker.Game.csproj" />
     </ItemGroup>
 
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

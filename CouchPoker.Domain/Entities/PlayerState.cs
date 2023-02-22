@@ -2,6 +2,7 @@ namespace CouchPoker.Domain.Entities;
 
 public class PlayerState : BaseEntity
 {
+    public int PlayerId { get; set; }
     public virtual Player Player { get; set; }
     public virtual GameBoard GameBoard { get; set; }
     public bool IsFolded { get; set; }

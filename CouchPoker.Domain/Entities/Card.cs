@@ -4,6 +4,8 @@ public class Card : BaseEntity
 {
     public CardSuit Suit { get; set; }
     public CardValue Value { get; set; }
+    public int GameBoardId { get; set; }
+    public virtual GameBoard GameBoard { get; set; }
 }
 
 public enum CardSuit

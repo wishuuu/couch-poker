@@ -1,3 +1,4 @@
+using CouchPoker.Game;
 using CouchPoker.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,9 +10,17 @@ builder.Services.AddDbContext<PokerGameContext>(opt =>
 {
     opt.UseInMemoryDatabase(databaseName: "CouchPoker");
     opt.UseLazyLoadingProxies();
-});
+}, ServiceLifetime.Singleton);
+
+builder.Services
+    .AddSingleton<GameInitializer>()
+    .AddSingleton<UnitOfWork>();
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
@@ -20,6 +29,12 @@ if (!app.Environment.IsDevelopment())
 {
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+}
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
@@ -36,6 +51,5 @@ app.MapControllerRoute(
     pattern: "api/{controller}/{action=Index}/{id?}");
 
 app.MapFallbackToFile("index.html");
-;
 
 app.Run();

@@ -36,14 +36,17 @@ public class PokerGameContext : DbContext
 
         modelBuilder.Entity<PlayerState>()
             .HasOne(ps => ps.Player)
-            .WithOne(ps => ps.PlayerState);
-        
+            .WithOne(ps => ps.PlayerState)
+            .HasForeignKey<PlayerState>(ps => ps.PlayerId);
+
         modelBuilder.Entity<GameBoard>()
             .HasMany(gb => gb.Players)
-            .WithOne(ps => ps.GameBoard);
+            .WithOne(ps => ps.GameBoard)
+            .HasForeignKey(ps => ps.GameBoardId);
         
         modelBuilder.Entity<GameBoard>()
             .HasMany(gb => gb.Cards)
-            .WithOne();
+            .WithOne(c => c.GameBoard)
+            .HasForeignKey(c => c.GameBoardId);
     }
 }
