@@ -7,4 +7,12 @@
         <RootNamespace>CouchPoker.Infrastructure</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CouchPoker.Domain\CouchPoker.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
