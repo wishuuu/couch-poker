@@ -1,4 +1,6 @@
-﻿namespace CouchPoker.Domain.Entities;
+﻿using System.Collections.Generic;
+
+namespace CouchPoker.Domain.Entities;
 
 public class GameBoard : BaseEntity
 {

@@ -6,7 +6,7 @@ function App() {
   const [count, setCount] = useState(0)
     
     fetch("/api/test")
-
+    
   return (
     <div className="App">
       <div>
@@ -29,7 +29,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-        <button onClick={() => console.log("/api/test")}>
+        <button 
+            className={"btn btn-ghost btn-sm"}
+            onClick={() => console.log("/api/test")}>
             Test
         </button>
     </div>
