@@ -51,6 +51,9 @@ public class GameBoardController : ControllerBase
         var player = _gameInitializer.CreatePlayer(username, connectionId, gameBoard);
         gameBoard.Players.Add(player);
         _unitOfWork.Save();
+        
+        _playerHubContext.Groups.AddToGroupAsync(player.ConnectionId, gameBoard.Identifier).Wait();
+        
         return Ok(_mapper.Map<PlayerDto>(player));
     }
 
@@ -60,5 +63,16 @@ public class GameBoardController : ControllerBase
     {
         var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
         return gameBoard != null ? Ok(_mapper.Map<GameBoardDto>(gameBoard)) : NotFound();
+    }
+    
+    [HttpPost]
+    [Route("shuffleDeck")]
+    public IActionResult ShuffleDeck(string identifier)
+    {
+        var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
+        if (gameBoard == null) return NotFound();
+        gameBoard.ShuffleCards();
+        _unitOfWork.Save();
+        return Ok();
     }
 }

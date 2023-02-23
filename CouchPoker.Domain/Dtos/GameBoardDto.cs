@@ -6,4 +6,5 @@ public class GameBoardDto
     public string Identifier { get; set; }
     public string ConnectionId { get; set; }
     public virtual ICollection<PlayerDto> Players { get; set; }
+    public virtual ICollection<CardDto> Cards { get; set; }
 }
