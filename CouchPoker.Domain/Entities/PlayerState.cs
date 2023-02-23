@@ -9,5 +9,5 @@ public class PlayerState : BaseEntity
     public bool IsAllIn { get; set; }
     public int ChipsOnBet { get; set; }
     public int ChipsOnHand { get; set; }
-    public virtual IEnumerable<Card> Cards { get; set; }
+    public virtual ICollection<Card> Cards { get; set; } = new List<Card>();
 }

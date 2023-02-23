@@ -18,4 +18,31 @@ public static class GameBoardExtension
 
         gameBoard.Cards = gameBoard.Cards.OrderBy(card => Guid.NewGuid()).ToList();
     }
+    
+    public static void DealCards(this GameBoard gameBoard)
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            foreach (var player in gameBoard.Players)
+            {
+                player.PlayerState.Cards.Add(gameBoard.Cards.First());
+                gameBoard.Cards.Remove(gameBoard.Cards.First());
+            }
+        }
+    }
+    
+    public static void DealFlop(this GameBoard gameBoard)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            gameBoard.CommunityCards.Add(gameBoard.Cards.First());
+            gameBoard.Cards.Remove(gameBoard.Cards.First());
+        }
+    }
+    
+    public static void DealTurn(this GameBoard gameBoard)
+    {
+        gameBoard.CommunityCards.Add(gameBoard.Cards.First());
+        gameBoard.Cards.Remove(gameBoard.Cards.First());
+    }
 }

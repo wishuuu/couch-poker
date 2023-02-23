@@ -9,7 +9,7 @@
         <SpaRoot>server-app\</SpaRoot>
         <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
         <SpaProxyServerUrl>http://localhost:42069</SpaProxyServerUrl>
-        <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
+<!--        <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>-->
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <RootNamespace>CouchPoker</RootNamespace>
