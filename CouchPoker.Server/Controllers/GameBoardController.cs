@@ -3,7 +3,6 @@ using CouchPoker.Domain.Dtos;
 using CouchPoker.Domain.Entities;
 using CouchPoker.Game;
 using CouchPoker.Infrastructure;
-using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CouchPoker.Controllers;
@@ -38,6 +37,7 @@ public class GameBoardController : ControllerBase
     public IActionResult JoinBoardAsPlayer(string identifier, string username, string connectionId)
     {
         var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
+        if (gameBoard == null) return NotFound();
         var player = _gameInitializer.CreatePlayer(username, connectionId, gameBoard);
         gameBoard.Players.Add(player);
         _unitOfWork.Save();
