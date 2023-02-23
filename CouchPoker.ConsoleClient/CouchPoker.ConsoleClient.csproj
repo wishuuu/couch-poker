@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Flurl.Http" Version="3.2.4" />
+      <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.3" />
+      <PackageReference Include="Microsoft.AspNetCore.SignalR.Client.Core" Version="7.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CouchPoker.Domain\CouchPoker.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

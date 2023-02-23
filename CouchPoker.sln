@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker.Domain", "CouchP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker.BoardInfrastructure", "CouchPoker.BoardInfrastructure\CouchPoker.BoardInfrastructure.csproj", "{2BEB61F7-591D-4CDD-B5B2-A6C7CEECF249}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker.ConsoleClient", "CouchPoker.ConsoleClient\CouchPoker.ConsoleClient.csproj", "{68EAC88F-E3A7-485F-839C-6C568B42443F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{2BEB61F7-591D-4CDD-B5B2-A6C7CEECF249}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BEB61F7-591D-4CDD-B5B2-A6C7CEECF249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BEB61F7-591D-4CDD-B5B2-A6C7CEECF249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
