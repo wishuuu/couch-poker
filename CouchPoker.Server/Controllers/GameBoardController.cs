@@ -34,8 +34,8 @@ public class GameBoardController : ControllerBase
     }
 
     [HttpPost]
-    [Route("joinBoardAsUser")]
-    public IActionResult JoinBoardAsUser(string identifier, string username, string connectionId)
+    [Route("joinBoardAsPlayer")]
+    public IActionResult JoinBoardAsPlayer(string identifier, string username, string connectionId)
     {
         var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
         var player = _gameInitializer.CreatePlayer(username, connectionId, gameBoard);
