@@ -1,4 +1,5 @@
 using CouchPoker.Game;
+using CouchPoker.Hubs;
 using CouchPoker.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,9 @@ builder.Services.AddDbContext<PokerGameContext>(opt =>
 builder.Services
     .AddSingleton<GameInitializer>()
     .AddSingleton<UnitOfWork>();
+
+builder.Services.AddSignalR();
+builder.Services.AddSignalRCore();
 
 builder.Services.AddControllersWithViews();
 
@@ -41,6 +45,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
+app.MapHub<GameBoardHub>("api/signalr/gameBoardHub");
+app.MapHub<PlayerHub>("api/signalr/playerHub");
 
 app.MapControllerRoute(
     name: "default",

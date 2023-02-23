@@ -2,8 +2,10 @@ using AutoMapper;
 using CouchPoker.Domain.Dtos;
 using CouchPoker.Domain.Entities;
 using CouchPoker.Game;
+using CouchPoker.Hubs;
 using CouchPoker.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 
 namespace CouchPoker.Controllers;
 
@@ -14,12 +16,17 @@ public class GameBoardController : ControllerBase
     private readonly GameInitializer _gameInitializer;
     private readonly UnitOfWork _unitOfWork;
     private readonly IMapper _mapper;
+    private readonly IHubContext<GameBoardHub> _gameBoardHubContext;
+    private readonly IHubContext<PlayerHub> _playerHubContext;
 
-    public GameBoardController(GameInitializer gameInitializer, UnitOfWork unitOfWork, IMapper mapper)
+    public GameBoardController(GameInitializer gameInitializer, UnitOfWork unitOfWork, IMapper mapper,
+        IHubContext<GameBoardHub> gameBoardHubContext, IHubContext<PlayerHub> playerHubContext)
     {
         _gameInitializer = gameInitializer;
         _unitOfWork = unitOfWork;
         _mapper = mapper;
+        _gameBoardHubContext = gameBoardHubContext;
+        _playerHubContext = playerHubContext;
     }
 
     [HttpPost]
@@ -29,6 +36,9 @@ public class GameBoardController : ControllerBase
         var gameBoard = _gameInitializer.Initialize(dto);
         _unitOfWork.Context.Add(gameBoard);
         _unitOfWork.Save();
+
+        _gameBoardHubContext.Groups.AddToGroupAsync(gameBoard.ConnectionId, gameBoard.Identifier).Wait();
+
         return Ok(gameBoard.Identifier);
     }
 
@@ -43,7 +53,7 @@ public class GameBoardController : ControllerBase
         _unitOfWork.Save();
         return Ok(_mapper.Map<PlayerDto>(player));
     }
-    
+
     [HttpGet]
     [Route("getBoardByIdentifier")]
     public IActionResult GetBoardByIdentifier(string identifier)

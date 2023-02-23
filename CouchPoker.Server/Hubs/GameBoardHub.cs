@@ -1,5 +1,3 @@
-using CouchPoker.Domain.Entities;
-using CouchPoker.Infrastructure;
 using Microsoft.AspNetCore.SignalR;
 
 namespace CouchPoker.Hubs;
@@ -16,6 +14,7 @@ public class GameBoardHub : Hub
     public override Task OnConnectedAsync()
     {
         _logger.LogInformation("Connected {ConnectionId}", Context.ConnectionId);
+        // TODO Check if user should be added to group in case of reconnection
         return base.OnConnectedAsync();
     }
 
