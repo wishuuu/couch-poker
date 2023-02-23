@@ -16,10 +16,18 @@ public class GameInitializer
         _mapper = mapper;
     }
 
-    public GameBoard Initialize(GameConfigDto gameConfigDto)
+    public GameBoard Initialize(GameBoardConfigDto gameBoardConfigDto)
     {
         _logger.LogInformation("Initializing game board");
-        var gameBoard = _mapper.Map<GameBoard>(gameConfigDto);
+        var gameBoard = _mapper.Map<GameBoard>(gameBoardConfigDto);
         return gameBoard;
+    }
+
+    public Player CreatePlayer(string name, string connectionId, GameBoard gameBoard)
+    {
+        _logger.LogInformation("Creating a new player");
+        var playerConfigDto = new PlayerConfigDto(name, connectionId, gameBoard);
+        var player = _mapper.Map<Player>(playerConfigDto);
+        return player;
     }
 }

@@ -1,6 +1,6 @@
 namespace CouchPoker.Domain.Dtos;
 
-public class GameConfigDto
+public class GameBoardConfigDto
 {
     public string ConnectionId { get; set; }
     public int MaxPlayers { get; set; }
