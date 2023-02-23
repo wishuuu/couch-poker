@@ -6,11 +6,6 @@ public static class GameBoardExtension
 {
     public static void ShuffleCards(this GameBoard gameBoard)
     {
-        foreach (var player in gameBoard.Players)
-        {
-            player.PlayerState.Cards = new List<Card>();
-        }
-        
         gameBoard.Cards = new List<Card>();
         for (int i = 0; i < 4; i++)
         for (int j = 2; j < 15; j++)
@@ -18,7 +13,15 @@ public static class GameBoardExtension
 
         gameBoard.Cards = gameBoard.Cards.OrderBy(card => Guid.NewGuid()).ToList();
     }
-    
+
+    private static void CleanHands(this GameBoard gameBoard)
+    {
+        foreach (var player in gameBoard.Players)
+        {
+            player.PlayerState.Cards = new List<Card>();
+        }
+    }
+
     public static void DealCards(this GameBoard gameBoard)
     {
         for (int i = 0; i < 2; i++)
@@ -44,5 +47,13 @@ public static class GameBoardExtension
     {
         gameBoard.CommunityCards.Add(gameBoard.Cards.First());
         gameBoard.Cards.Remove(gameBoard.Cards.First());
+    }
+    
+    public static void BeginGame(this GameBoard gameBoard)
+    {
+        gameBoard.CleanHands();
+        gameBoard.ShuffleCards();
+        gameBoard.DealCards();
+        gameBoard.DealFlop();
     }
 }

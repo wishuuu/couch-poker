@@ -14,4 +14,5 @@ public class GameBoard : BaseEntity
     public int ChipsOnBet { get; set; }
     public int StartChips { get; set; }
     public int CurrentPlayer { get; set; }
+    public int StartingPlayer { get; set; }
 }

@@ -66,45 +66,23 @@ public class GameBoardController : ControllerBase
     }
     
     [HttpPost]
-    [Route("shuffleDeck")]
-    public IActionResult ShuffleDeck(string identifier)
-    {
-        var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
-        if (gameBoard == null) return NotFound();
-        gameBoard.ShuffleCards();
-        _unitOfWork.Save();
-        return Ok();
-    }
-    
-    [HttpPost]
-    [Route("dealCards")]
-    public IActionResult DealCards(string identifier)
-    {
-        var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
-        if (gameBoard == null) return NotFound();
-        gameBoard.DealCards();
-        _unitOfWork.Save();
-        return Ok();
-    }
-    
-    [HttpPost]
-    [Route("dealFlop")]
-    public IActionResult DealFlop(string identifier)
-    {
-        var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
-        if (gameBoard == null) return NotFound();
-        gameBoard.DealFlop();
-        _unitOfWork.Save();
-        return Ok();
-    }
-    
-    [HttpPost]
     [Route("dealTurn")]
     public IActionResult DealTurn(string identifier)
     {
         var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
         if (gameBoard == null) return NotFound();
         gameBoard.DealTurn();
+        _unitOfWork.Save();
+        return Ok();
+    }
+    
+    [HttpPost]
+    [Route("beginGame")]
+    public IActionResult BeginGame(string identifier)
+    {
+        var gameBoard = _unitOfWork.Context.Set<GameBoard>().FirstOrDefault(board => board.Identifier == identifier);
+        if (gameBoard == null) return NotFound();
+        gameBoard.BeginGame();
         _unitOfWork.Save();
         return Ok();
     }
