@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker.BoardInfrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CouchPoker.ConsoleClient", "CouchPoker.ConsoleClient\CouchPoker.ConsoleClient.csproj", "{68EAC88F-E3A7-485F-839C-6C568B42443F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pheval", "..\PokerHandEvaluator.cs\pheval\pheval.csproj", "{042EE363-4B6A-442F-8CEB-BC157991C4C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68EAC88F-E3A7-485F-839C-6C568B42443F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{042EE363-4B6A-442F-8CEB-BC157991C4C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{042EE363-4B6A-442F-8CEB-BC157991C4C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{042EE363-4B6A-442F-8CEB-BC157991C4C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{042EE363-4B6A-442F-8CEB-BC157991C4C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
