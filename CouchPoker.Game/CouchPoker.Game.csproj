@@ -12,6 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\PokerHandEvaluator.cs\pheval\pheval.csproj" />
       <ProjectReference Include="..\CouchPoker.Domain\CouchPoker.Domain.csproj" />
     </ItemGroup>
 
